@@ -1,0 +1,141 @@
+1) Посмотреть где я - 
+pwd
+
+2) Создать папку - 
+mkdir q1
+
+3) Зайти в папку - 
+cd q1
+
+4) Создать 3 папки -
+mkdir q2 q3 q4
+
+5) Зайти в любоую папку
+cd q2
+
+6) Создать 5 файлов (3 txt, 2 json)
+touch qq1.txt qq2.txt qq3.txt w.json w1.json
+
+7) Создать 3 папки
+mkdir q5 q6 q7
+
+8) Вывести список содержимого папки
+ls -l
+
+9) + Открыть любой txt файл
+vim qq1.txt
+
+10) + написать туда что-нибудь, любой текст
+qwerty
+asdfg
+zcxcv
+122334
+567888
+8990--0
+poiyy
+lkkjggfg
+бьтиимм
+nfvbvd
+ertbfgguumn
+766534534
+234354778
+gnhghjhjkhl
+786754645
+
+11) + сохранить и выйти.
+"escape"
+:wq
+
+12) Выйти из папки на уровень выше
+cd ..
+
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+mv q2/qq1.txt q2/qq2.txt q3
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку
+cp q3/qq1.txt q3/qq2.txt q2
+
+15) Найти файл по имени
+find qq2.txt q3
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+содержимое в реальном времени:
+tail -f w2/qq1.txt
+при внесении изменений в файл и сохранении их, все сразу отображается в терминале.
+
+команда grep это поиск в файле:
+grep 'qwe' qq1.txt
+ответ - выдает строчку "qwerty" в файле qq1.txt
+
+17) вывести несколько первых строк из текстового файла
+head -3 qq1.txt
+
+18) вывести несколько последних строк из текстового файла
+tail -5 qq1.txt
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+less qq1.txt
+ выдает постранично содержимое файла.
+выход - клавиша "q"
+
+20) вывести дату и время
+date
+
+Задачи *:
+
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+
+curl http://162.55.220.72:5005/terminal-hw-request
+
+получил запрос:
+Task_1": "Send the next URL in terminal: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)"
+
+ответил:
+curl "http://162.55.220.72:5005/get_method?name=(Den)&age=(41)"
+
+получил ответ от сервера.
+" % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    25  100    25    0     0    213      0 --:--:-- --:--:-- --:--:--   215[
+  "(Den)",
+  "(41)"
+]
+"
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+вариант 1:
+
+в терминале: touch s1.txt
+в терминале: vim s1.txt
+в редакторе:
+cd q1
+mkdir q2 q3 q4
+cd q2
+touch qq1.txt qq2.txt qq3.txt w.json w1.json
+mkdir q5 q6 q7
+ls -l
+cd ..
+mv q2/qq2.txt q3/qq2.txt ; mv q2/qq3.txt q3/qq3.txt
+
+выйти из редактора. :wq
+
+в терминале: sh s1.txt
+
+вариант 2:
+в терминале: touch s1.sh
+в терминале: vim s1.sh
+в редакторе:
+#!/bin/bash
+cd q1
+mkdir q2 q3 q4
+cd q2
+touch qq1.txt qq2.txt qq3.txt w.json w1.json
+mkdir q5 q6 q7
+ls -l
+cd ..
+mv q2/qq2.txt q3/qq2.txt ; mv q2/qq3.txt q3/qq3.txt
+
+выйти из редактора. :wq
+
+в терминале: sh s1.sh
