@@ -1,6 +1,7 @@
 https://github.com/Denismvl123/JSON.git
 https://github.com/Denismvl123/XML.git
 https://github.com/Denismvl123/TXT.git
+git config --global user.name "PATR!CK3"
 
 
 JSON
